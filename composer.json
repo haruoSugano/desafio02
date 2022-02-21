@@ -1,0 +1,17 @@
+{
+  "name": "heliosugano/desafio02",
+  "authors": [
+    {
+      "name": "haruoSugano",
+      "email": "haruosugano@icloud.com"
+    }
+  ],
+  "require": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "Heliosugano\\Desafio02\\": "src/"
+    }
+  }
+}
