@@ -3,7 +3,7 @@
 namespace Heliosugano\Desafio02\Parser;
 
 use Heliosugano\Desafio02\Iterator\PanelIterator;
-use Heliosugano\Desafio02\Iterator\TokenIterator;
+use Heliosugano\Desafio02\Iterator\LoginIterator;
 
 class PanelParser extends AbstractParser
 {

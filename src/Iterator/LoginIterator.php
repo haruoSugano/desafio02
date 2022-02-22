@@ -2,7 +2,7 @@
 
 namespace Heliosugano\Desafio02\Iterator;
 
-class TokenIterator extends AbstractIterator
+class LoginIterator extends AbstractIterator
 {
     function current()
     {

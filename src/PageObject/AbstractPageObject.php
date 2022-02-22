@@ -22,8 +22,8 @@ abstract class AbstractPageObject
     {
         try {
             return $this->client->request($method, $uri, $options);
-        } catch (\Exception $erro){
-            $this->error($erro->getMessage());
+        } catch (\Exception $e){
+            $this->error($e->getMessage());
             return null;
         }
     }

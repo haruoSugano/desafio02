@@ -2,9 +2,9 @@
 
 namespace Heliosugano\Desafio02\Parser;
 
-use Heliosugano\Desafio02\Iterator\TokenIterator;
+use Heliosugano\Desafio02\Iterator\LoginIterator;
 
-class TokenParser extends AbstractParser
+class LoginParser extends AbstractParser
 {
     /**
      * @throws \Exception
@@ -13,6 +13,6 @@ class TokenParser extends AbstractParser
     {
         $xpath = "//div//form//input[@name='_token']";
 
-        return new TokenIterator($this->getHtml(), $xpath);
+        return new LoginIterator($this->getHtml(), $xpath);
     }
 }

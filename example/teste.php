@@ -8,10 +8,8 @@ $user = 'helio.sugano@forseti.com.br';
 $password = 'Forseti2408';
 
 $loginPage = new LoginPageObject();
-$token = $loginPage->getToken()->getIterator()->current();
 
 $login = $loginPage
-    ->setToken($token)
     ->setUsuario($user)
     ->setSenha($password)
     ->postLogin();

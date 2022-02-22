@@ -30,10 +30,10 @@ abstract class AbstractIterator implements \Iterator, \Countable
     /**
      * @throws \Exception
      */
-    public function __construct($body, $xpath)
+    public function __construct($html, $xpath)
     {
         $this->dom = new Crawler();
-        $this->dom->addHtmlContent($body);
+        $this->dom->addHtmlContent($html);
         $this->crawler = $this->dom->filterXPath($xpath)->getIterator();
         $this->total = $this->crawler->count();
     }
