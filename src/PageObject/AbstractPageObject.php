@@ -4,6 +4,7 @@ namespace Heliosugano\Desafio02\PageObject;
 
 use GuzzleHttp\ClientInterface;
 use Heliosugano\Desafio02\Factory\GuzzleClientFactory;
+use Heliosugano\Desafio02\Singleton\ClientSingleton;
 use Heliosugano\Desafio02\Traits\ForsetiLoggerTrait;
 
 abstract class AbstractPageObject
@@ -12,9 +13,9 @@ abstract class AbstractPageObject
 
     protected $client;
 
-    public function __construct(ClientInterface $client = null)
+    public function __construct()
     {
-        $this->client = ($client) ? $client : GuzzleClientFactory::getInstance();
+        $this->client = ClientSingleton::getInstance();
     }
 
     public function request($method, $uri, $options = [])

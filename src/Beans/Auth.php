@@ -6,6 +6,7 @@ trait Auth
 {
     private $usuario;
     private $senha;
+    private $token;
 
     /**
      * @param string $usuario
@@ -22,6 +23,15 @@ trait Auth
     public function setSenha($senha)
     {
         $this->senha = $senha;
+        return $this;
+    }
+
+    /**
+     * @param string $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
         return $this;
     }
 
