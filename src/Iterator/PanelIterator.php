@@ -22,9 +22,9 @@ class PanelIterator extends AbstractIterator
 
         $obj->formatHms = $regex->getRegex($obj);
 
-        $obj->formatHora = $regex->getRegex($obj)->horas;
-        $obj->formatMinuto = $regex->getRegex($obj)->minutos;
-        $obj->formatSegundo = $regex->getRegex($obj)->segundos;
+        $obj->formatHoras = $regex->getRegex($obj)->horas;
+        $obj->formatMinutos = $regex->getRegex($obj)->minutos;
+        $obj->formatSegundos = $regex->getRegex($obj)->segundos;
 
         return $obj;
     }
