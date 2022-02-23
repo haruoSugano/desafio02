@@ -7,10 +7,13 @@
 ### Como utilizar:
 * Clone este repositório 
 ```
-git clone https://github.com/git-forseti/monitoramento-portais.git
+git clone https://github.com/haruoSugano/desafio02
 ```
 * Instalar o composer
 ```
 composer install
 ```
-
+* Navegar até o diretório desafio02, digitar o comando:
+```
+php example/test.php
+```
