@@ -4,8 +4,8 @@ use Heliosugano\Desafio02\PageObject\PontoPageObject;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$user = 'helio.sugano@forseti.com.br';
-$password = 'Forseti2408';
+$user = 'e-mail';
+$password = 'Digite a sua senha';
 
 $loginPage = new PontoPageObject();
 
