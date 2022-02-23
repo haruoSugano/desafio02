@@ -16,9 +16,12 @@ $login = $loginPage
 
 $horarios = $login->getIterator()->current();
 
-print_r($horarios);
 echo '-----------------------------------------------------------------------------' . PHP_EOL;
 echo "Inicio do expediente: " . $horarios->inicio . PHP_EOL;
 echo "Saída para o Intervalo: " . $horarios->saida . PHP_EOL;
 echo "Volta do intervalo: " . $horarios->volta . PHP_EOL;
 echo "Final do expediente: " . $horarios->final . PHP_EOL;
+
+print_r($horarios->formatHms->horas[0] . PHP_EOL);
+print_r($horarios->formatHms->minutos[0] .PHP_EOL);
+print_r($horarios->formatHms->segundos[0] .PHP_EOL);

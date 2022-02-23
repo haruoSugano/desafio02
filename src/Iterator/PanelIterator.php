@@ -2,6 +2,7 @@
 
 namespace Heliosugano\Desafio02\Iterator;
 
+use Heliosugano\Desafio02\Regex\PanelRegex;
 use stdClass;
 
 class PanelIterator extends AbstractIterator
@@ -12,11 +13,18 @@ class PanelIterator extends AbstractIterator
         $node = $this->crawler->current();
 
         $obj = new stdClass();
+        $regex = new PanelRegex();
 
         $obj->inicio = $node->getElementsByTagName('td')->item(0)->textContent ?: "Não marcado";
         $obj->saida = $node->getElementsByTagName('td')->item(1)->textContent ?: "Não marcado";
         $obj->volta = $node->getElementsByTagName('td')->item(2)->textContent ?: "Não marcado";
         $obj->final = $node->getElementsByTagName('td')->item(3)->textContent ?: "Não marcado";
+
+        $obj->formatHms = $regex->getRegex($obj);
+
+        $obj->formatHora = $regex->getRegex($obj)->horas;
+        $obj->formatMinuto = $regex->getRegex($obj)->minutos;
+        $obj->formatSegundo = $regex->getRegex($obj)->segundos;
 
         return $obj;
     }
