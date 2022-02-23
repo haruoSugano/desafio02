@@ -3,6 +3,7 @@
 ### Requerimentos
 * PHP **>=** 5.6
 * Composer
+* VPN
 
 ### Como utilizar:
 * Clone este repositório 
