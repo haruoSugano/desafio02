@@ -4,6 +4,7 @@
 * PHP **>=** 5.6
 * Composer
 * VPN
+* Usuário e Senha
 
 ### Como utilizar:
 * Clone este repositório 
