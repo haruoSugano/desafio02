@@ -12,12 +12,12 @@ class PanelIterator extends AbstractIterator
         $node = $this->crawler->current();
 
         $obj = new stdClass();
-        if (null != $node->textContent){
-            $obj->horario = $node->textContent;
-        }
-        else {
-            $obj->horario = 'Não marcado';
-        }
+
+        $obj->inicio = $node->getElementsByTagName('td')->item(0)->textContent ?: "Não marcado";
+        $obj->saida = $node->getElementsByTagName('td')->item(1)->textContent ?: "Não marcado";
+        $obj->volta = $node->getElementsByTagName('td')->item(2)->textContent ?: "Não marcado";
+        $obj->final = $node->getElementsByTagName('td')->item(3)->textContent ?: "Não marcado";
+
         return $obj;
     }
 }

@@ -1,25 +1,24 @@
 <?php
 
-use Heliosugano\Desafio02\PageObject\LoginPageObject;
+use Heliosugano\Desafio02\PageObject\PontoPageObject;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $user = 'helio.sugano@forseti.com.br';
 $password = 'Forseti2408';
 
-$loginPage = new LoginPageObject();
+$loginPage = new PontoPageObject();
 
 $login = $loginPage
     ->setUsuario($user)
     ->setSenha($password)
     ->postLogin();
 
-$panelIterator = $login->getIterator();
+$horarios = $login->getIterator()->current();
 
-$horarios = [];
-foreach ($panelIterator as $horario) $horarios[] = $horario;
+print_r($horarios);
 echo '-----------------------------------------------------------------------------' . PHP_EOL;
-echo "Inicio do expediente: " . $horarios[0]->horario . PHP_EOL;
-echo "Saída para o Intervalo: " . $horarios[1]->horario . PHP_EOL;
-echo "Volta do intervalo: " . $horarios[2]->horario . PHP_EOL;
-echo "Final do expediente: " . $horarios[3]->horario . PHP_EOL;
+echo "Inicio do expediente: " . $horarios->inicio . PHP_EOL;
+echo "Saída para o Intervalo: " . $horarios->saida . PHP_EOL;
+echo "Volta do intervalo: " . $horarios->volta . PHP_EOL;
+echo "Final do expediente: " . $horarios->final . PHP_EOL;
