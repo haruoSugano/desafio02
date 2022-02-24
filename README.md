@@ -1,7 +1,7 @@
 # desafio02
 ### Captura de informação do site: Ponto
 
-###Objetivo: Capturar as informações da tabela onde é registrado os horários de pontos: 
+### Objetivo: Capturar as informações da tabela onde é registrado os horários de pontos: 
 * Início do expediente, Saída para o Intervalo, Volta e o Final de expediente.
 
 
