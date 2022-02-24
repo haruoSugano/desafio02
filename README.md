@@ -26,3 +26,9 @@ composer install
 ```
 php example/test.php
 ```
+### Biblioteca utilizada:
+* "symfony/dom-crawler": "^3.2",
+* "symfony/css-selector": "^3.0",
+* "guzzlehttp/guzzle": "^6.3",
+* "forseti/logger": "^1.3",
+* "ext-json": "*"
