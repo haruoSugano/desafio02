@@ -1,5 +1,5 @@
 # desafio02
-### Captura de informação do site: Ponto
+### Captura de informação do site: Ponto eletrônico
 
 ### Objetivo: Capturar as informações da tabela onde é registrado os horários de pontos: 
 * Buscar o token;
